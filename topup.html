@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Game Favoritmu - Ncuks Store</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Top up game favoritmu (Mobile Legends, Free Fire, Valorant, PUBG) di Ncuks Store. Proses otomatis, harga termurah, dan 100% aman terpercaya.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="bg-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="mainNavbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="favicon.png" alt="Ncuks Store">
+                <span class="text-primary">Ncuks</span>Store
+            </a>
+            <nav class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+                <a href="produk.html" class="active"><i class="fas fa-gamepad"></i> Produk</a>
+                <a href="tentang.html"><i class="fas fa-info-circle"></i> Tentang</a>
+                <a href="kontak.html"><i class="fas fa-headset"></i> Kontak</a>
+            </nav>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Topup Layout -->
+    <div class="container topup-container">
+        <!-- Sidebar: Game Info -->
+        <aside class="game-sidebar">
+            <div class="game-hero-card">
+                <img src="emel.jpg" alt="Game Banner" class="game-hero-banner" id="gameBanner">
+                <div class="game-hero-body">
+                    <img src="emel.jpg" alt="Game Icon" class="game-hero-icon" id="gameIcon">
+                    <h2 id="gameTitle">Mobile Legends</h2>
+                    <p id="gameDev">Moonton</p>
+                    <div class="game-instructions">
+                        <h4><i class="fas fa-info-circle"></i> Cara Order</h4>
+                        <ul>
+                            <li>Masukkan User ID & Zone ID kamu</li>
+                            <li>Pilih nominal Diamond yang diinginkan</li>
+                            <li>Pilih metode pembayaran favoritmu</li>
+                            <li>Klik Beli Sekarang untuk konfirmasi ke WA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Form Content -->
+        <main class="topup-main">
+            <form id="topupForm">
+                <!-- Step 1: Account Data -->
+                <div class="glass-section">
+                    <div class="section-header">
+                        <div class="step-badge">1</div>
+                        <h3>Data Akun</h3>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>User ID</label>
+                            <input type="text" id="userId" placeholder="Masukkan User ID" required>
+                        </div>
+                        <div class="form-group" id="zoneIdContainer">
+                            <label>Zone ID</label>
+                            <input type="text" id="zoneId" placeholder="Masukkan Zone ID">
+                        </div>
+                    </div>
+                    <p class="form-hint">Contoh: 12345678 (9876)</p>
+                </div>
+
+                <!-- Step 2: Select Nominal -->
+                <div class="glass-section">
+                    <div class="section-header">
+                        <div class="step-badge">2</div>
+                        <h3>Pilih Nominal</h3>
+                    </div>
+                    <div class="nominal-grid-premium" id="nominalGrid">
+                        <!-- Nominal Cards (Will be dynamic or hardcoded for now) -->
+                        <div class="premium-card" data-price="1500" data-item="5 Diamonds">
+                            <div class="save-badge">HEMAT</div>
+                            <i class="fas fa-gem"></i>
+                            <span class="item-name">5 Diamonds</span>
+                            <span class="item-price">Rp 1.500</span>
+                        </div>
+                        <div class="premium-card" data-price="15000" data-item="55 Diamonds">
+                            <i class="fas fa-gem"></i>
+                            <span class="item-name">55 Diamonds</span>
+                            <span class="item-price">Rp 15.000</span>
+                        </div>
+                        <div class="premium-card" data-price="30000" data-item="121 Diamonds">
+                            <div class="save-badge">BEST SELLER</div>
+                            <i class="fas fa-gem"></i>
+                            <span class="item-name">121 Diamonds</span>
+                            <span class="item-price">Rp 30.000</span>
+                        </div>
+                        <div class="premium-card" data-price="60000" data-item="275 Diamonds">
+                            <i class="fas fa-gem"></i>
+                            <span class="item-name">275 Diamonds</span>
+                            <span class="item-price">Rp 60.000</span>
+                        </div>
+                        <div class="premium-card" data-price="120000" data-item="550 Diamonds">
+                            <i class="fas fa-gem"></i>
+                            <span class="item-name">550 Diamonds</span>
+                            <span class="item-price">Rp 120.000</span>
+                        </div>
+                        <div class="premium-card" data-price="250000" data-item="1100 Diamonds">
+                            <div class="save-badge">PROMO</div>
+                            <i class="fas fa-gem"></i>
+                            <span class="item-name">1100 Diamonds</span>
+                            <span class="item-price">Rp 250.000</span>
+                        </div>
+                    </div>
+                    <input type="hidden" id="selectedItem" required>
+                    <input type="hidden" id="selectedPrice" required>
+                </div>
+
+                <!-- Step 3: Payment -->
+                <div class="glass-section">
+                    <div class="section-header">
+                        <div class="step-badge">3</div>
+                        <h3>Metode Pembayaran</h3>
+                    </div>
+                    <div class="payment-list-premium">
+                        <div class="payment-item-premium" data-method="qris">
+                            <div class="payment-left">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_QRIS.svg" alt="QRIS"
+                                    class="payment-method-icon">
+                                <span class="payment-method-name">QRIS (All Payment)</span>
+                            </div>
+                            <span class="payment-method-price" id="price-qris">Rp 0</span>
+                        </div>
+                        <div class="payment-item-premium" data-method="dana">
+                            <div class="payment-left">
+                                <div class="payment-method-icon bg-blue"
+                                    style="display:flex;align-items:center;justify-content:center;color:white;font-weight:900;font-size:10px;">
+                                    DANA</div>
+                                <span class="payment-method-name">DANA</span>
+                            </div>
+                            <span class="payment-method-price" id="price-dana">Rp 0</span>
+                        </div>
+                        <div class="payment-item-premium" data-method="gopay">
+                            <div class="payment-left">
+                                <div class="payment-method-icon bg-green"
+                                    style="display:flex;align-items:center;justify-content:center;color:white;font-weight:900;font-size:10px;">
+                                    GOPAY</div>
+                                <span class="payment-method-name">GoPay</span>
+                            </div>
+                            <span class="payment-method-price" id="price-gopay">Rp 0</span>
+                        </div>
+                    </div>
+                    <input type="hidden" id="selectedPayment" required>
+                </div>
+
+                <!-- Step 4: Contact -->
+                <div class="glass-section">
+                    <div class="section-header">
+                        <div class="step-badge">4</div>
+                        <h3>Kontak Konfirmasi</h3>
+                    </div>
+                    <div class="form-group">
+                        <label>Nomor WhatsApp (kamu)</label>
+                        <input type="number" id="whatsapp" placeholder="Contoh: 08123456789" required>
+                    </div>
+                    <p class="form-hint">Bukti pembayaran akan dikirimkan ke nomor admin.</p>
+                </div>
+
+                <div style="padding-bottom: 120px;"></div>
+            </form>
+        </main>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="checkout-modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-shopping-bag"></i> Konfirmasi Pesanan</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="order-details">
+                    <div class="detail-item"><span>Game</span><strong id="modalGame">-</strong></div>
+                    <div class="detail-item"><span>User ID</span><strong id="modalId">-</strong></div>
+                    <div class="detail-item"><span>Item</span><strong id="modalItem">-</strong></div>
+                    <div class="detail-item"><span>Metode Bayar</span><strong id="modalPayment">-</strong></div>
+                    <div class="detail-item total"><span>Total Bayar</span><strong id="modalTotal">-</strong></div>
+                </div>
+                <div class="payment-instruction">
+                    <p><i class="fas fa-info-circle"></i> Silakan selesaikan pembayaran dan kirim bukti transfer ke WhatsApp kami.</p>
+                </div>
+                <button class="btn btn-primary w-full" id="confirmOrder">
+                    <i class="fab fa-whatsapp"></i> Konfirmasi Via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Summary Bar (Sticky) -->
+    <div class="order-summary-bar" id="summaryBar">
+        <div class="summary-info">
+            <h4>Total Pembayaran</h4>
+            <div class="summary-value" id="summaryTotal">Rp 0</div>
+        </div>
+        <div class="summary-info">
+            <h4>Item Terpilih</h4>
+            <div class="summary-value" id="summaryItem">-</div>
+        </div>
+        <button type="button" id="stickySubmit" class="btn btn-primary">
+            <i class="fas fa-shopping-cart"></i> Beli Sekarang
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-glow"></div>
+        <div class="footer-mesh"></div>
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="favicon.png" alt="Ncuks Store">
+                        <span class="text-primary">Ncuks</span>Store
+                    </a>
+                    <p>Ncuks Store adalah platform top up game termurah, terpercaya, dan tercepat di Indonesia. Kami berkomitmen memberikan layanan terbaik bagi seluruh gamer tanah air.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="produk.html">Semua Game</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kontak.html">Bantuan & FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-links">
+                    <h4>Populer</h4>
+                    <ul>
+                        <li><a href="topup.html?game=ml">Mobile Legends</a></li>
+                        <li><a href="topup.html?game=ff">Free Fire</a></li>
+                        <li><a href="topup.html?game=valo">Valorant</a></li>
+                        <li><a href="topup.html?game=pubg">PUBG Mobile</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Keunggulan Kami</h4>
+                    <div class="trust-badges">
+                        <div class="badge-item">
+                            <i class="fas fa-bolt"></i>
+                            <div class="badge-text">
+                               <h5>Proses Instan</h5>
+                               <p>Pengiriman otomatis dalam hitungan detik.</p>
+                            </div>
+                        </div>
+                        <div class="badge-item">
+                            <i class="fas fa-shield-check"></i>
+                            <div class="badge-text">
+                               <h5>100% Aman</h5>
+                               <p>Transaksi legal dan terjamin keamanannya.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-stripe">
+                <span class="payment-title">Metode Pembayaran Terpopuler</span>
+                <div class="payment-logos">
+                    <a href="produk.html" class="payment-link" title="Top Up via QRIS">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_QRIS.svg" alt="QRIS" class="brighten">
+                    </a>
+                    <a href="produk.html" class="payment-link" title="Top Up via DANA">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA">
+                    </a>
+                    <a href="produk.html" class="payment-link" title="Top Up via GoPay">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" alt="Gopay" class="brighten">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 <span class="text-primary">Ncuks Store</span>. Powered by Passion for Gamers.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Ketentuan Layanan</a>
+                    <a href="#">Kebijakan Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Ncuks Store</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Pelajari lebih lanjut tentang misi Ncuks Store dalam menyediakan layanan top up game terbaik, aman, dan terpercaya bagi gamer Indonesia.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 80px 0;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .feature-item i {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-image img {
+            width: 100%;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="bg-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="mainNavbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="favicon.png" alt="Ncuks Store">
+                <span class="text-primary">Ncuks</span>Store
+            </a>
+            <nav class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+                <a href="produk.html"><i class="fas fa-gamepad"></i> Produk</a>
+                <a href="tentang.html" class="active"><i class="fas fa-info-circle"></i> Tentang</a>
+                <a href="kontak.html"><i class="fas fa-headset"></i> Kontak</a>
+            </nav>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Tentang <span class="text-primary">Ncuks Store</span></h1>
+            <p>Mengenal lebih dekat platform top up game terbaik pilihan gamer Indonesia.</p>
+        </div>
+    </section>
+
+    <!-- Main About Content -->
+    <section class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Visi Kami Adalah Memberikan <span class="text-primary">Pengalaman Terbaik</span></h2>
+                <p>Ncuks Store didirikan dengan satu tujuan utama: memudahkan para gamer untuk melakukan top up dengan
+                    aman, cepat, dan terjangkau.</p>
+                <p>Kami memahami bahwa dalam dunia gaming, waktu adalah segalanya. Itulah mengapa kami mengoptimalkan
+                    sistem kami untuk memproses setiap transaksi secara instan.</p>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Proses Instan</h4>
+                        <p>Hanya hitungan detik setelah pembayaran.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>100% Aman</h4>
+                        <p>Transaksi legal dan terjamin keamanannya.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="ncukstore.jpeg" alt="Ncuks Store Workspace">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-glow"></div>
+        <div class="footer-mesh"></div>
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="favicon.png" alt="Ncuks Store">
+                        <span class="text-primary">Ncuks</span>Store
+                    </a>
+                    <p>Ncuks Store adalah platform top up game termurah, terpercaya, dan tercepat di Indonesia. Kami berkomitmen memberikan layanan terbaik bagi seluruh gamer tanah air.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="produk.html">Semua Game</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kontak.html">Bantuan & FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-links">
+                    <h4>Populer</h4>
+                    <ul>
+                        <li><a href="topup.html?game=ml">Mobile Legends</a></li>
+                        <li><a href="topup.html?game=ff">Free Fire</a></li>
+                        <li><a href="topup.html?game=valo">Valorant</a></li>
+                        <li><a href="topup.html?game=pubg">PUBG Mobile</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Keunggulan Kami</h4>
+                    <div class="trust-badges">
+                        <div class="badge-item">
+                            <i class="fas fa-bolt"></i>
+                            <div class="badge-text">
+                               <h5>Proses Instan</h5>
+                               <p>Pengiriman otomatis dalam hitungan detik.</p>
+                            </div>
+                        </div>
+                        <div class="badge-item">
+                            <i class="fas fa-shield-check"></i>
+                            <div class="badge-text">
+                               <h5>100% Aman</h5>
+                               <p>Transaksi legal dan terjamin keamanannya.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-stripe">
+                <span class="payment-title">Metode Pembayaran Terpopuler</span>
+                <div class="payment-logos">
+                    <a href="produk.html" class="payment-link" title="Top Up via QRIS">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_QRIS.svg" alt="QRIS" class="brighten">
+                    </a>
+                    <a href="produk.html" class="payment-link" title="Top Up via DANA">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA">
+                    </a>
+                    <a href="produk.html" class="payment-link" title="Top Up via GoPay">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" alt="Gopay" class="brighten">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 <span class="text-primary">Ncuks Store</span>. Powered by Passion for Gamers.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Ketentuan Layanan</a>
+                    <a href="#">Kebijakan Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
