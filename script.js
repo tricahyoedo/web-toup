@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const wa = document.getElementById('whatsapp').value.trim();
                 const fullId = userId + (data.hasZone ? ` (${zoneId})` : '');
                 
-                const msg = `*ORDER NCUKS STORE*\n\n` +
+                const msg = `*ORDER NAILS STORE*\n\n` +
                             `🎮 Game: ${data.name}\n` +
                             `🆔 ID: ${fullId}\n` +
                             `💎 Item: ${selectedItemInput.value}\n` +
@@ -209,16 +209,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.open(`https://wa.me/6283856120537?text=${encodeURIComponent(msg)}`, '_blank');
                 
                 // Save History
-                const orders = JSON.parse(localStorage.getItem('ncuk_orders') || '[]');
+                const orders = JSON.parse(localStorage.getItem('nails_orders') || '[]');
                 orders.unshift({
-                    id: 'NC-' + Math.floor(Math.random() * 9000 + 1000),
+                    id: 'NS-' + Math.floor(Math.random() * 9000 + 1000),
                     game: data.name,
                     item: selectedItemInput.value,
                     price: summaryTotal.innerText,
                     status: 'Pending',
                     date: new Date().toLocaleDateString('id-ID')
                 });
-                localStorage.setItem('ncuk_orders', JSON.stringify(orders.slice(0, 5)));
+                localStorage.setItem('nails_orders', JSON.stringify(orders.slice(0, 5)));
                 
                 closeTheModal();
                 setTimeout(() => window.location.href = 'sukses.html', 500);
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const historyContainer = document.getElementById('orderHistoryContainer');
         if (!historyContainer) return;
 
-        const orders = JSON.parse(localStorage.getItem('ncuk_orders') || '[]');
+        const orders = JSON.parse(localStorage.getItem('nails_orders') || '[]');
         if (orders.length > 0) {
             let html = '<div class="history-list-premium">';
             orders.forEach(o => {
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateRealLiveFeed = () => {
         if (!liveFeedContainer) return;
         
-        const orders = JSON.parse(localStorage.getItem('ncuk_orders') || '[]');
+        const orders = JSON.parse(localStorage.getItem('nails_orders') || '[]');
         if (orders.length === 0) {
             liveFeedContainer.innerHTML = '<p class="loading-shimmer">Belum ada transaksi masuk.</p>';
             return;
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="live-user">
                         <div class="live-user-avatar"><i class="fas fa-shopping-cart"></i></div>
                         <div class="live-info">
-                            <strong>Pelanggan Ncuks</strong> baru saja membeli <strong>${o.item}</strong>
+                            <strong>Pelanggan Nails</strong> baru saja membeli <strong>${o.item}</strong>
                             <span>Game: ${o.game} | ID: ${o.id}</span>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "ncuks-store",
+  "name": "nails-store",
   "builds": [
     { "src": "*.html", "use": "@vercel/static" },
     { "src": "style.css", "use": "@vercel/static" },

@@ -11,11 +11,11 @@ app.use(cors());
 
 // Halaman depan untuk cek apakah server hidup
 app.get('/', (req, res) => {
-    res.send('<h1>Robot Ncuks Store: STATUS AKTIF 🚀</h1><p>Server backend berjalan dengan baik. Siap menerima pesanan otomatis!</p>');
+    res.send('<h1>Robot Nails Store: STATUS AKTIF 🚀</h1><p>Server backend berjalan dengan baik. Siap menerima pesanan otomatis!</p>');
 });
 
 // DATA RAHASIA - JANGAN KASIH TAHU SIAPAPUN
-const DIGIFLAZZ_USER = "ncuks_store"; // Ganti dengan username Digiflazz kamu
+const DIGIFLAZZ_USER = "nails_store"; // Ganti dengan username Digiflazz kamu
 const DIGIFLAZZ_KEY = "xxxx-xxxx-xxxx"; // Ganti dengan API Key Digiflazz kamu
 
 // Endpoint untuk menerima pesanan dari website
@@ -74,7 +74,7 @@ app.post('/api/contact', async (req, res) => {
     const mailOptions = {
         from: reply_to,
         to: 'tricahyopriambodo13@gmail.com',
-        subject: `[NCUKS STORE] Pesan Baru dari ${from_name}`,
+        subject: `[NAILS STORE] Pesan Baru dari ${from_name}`,
         text: `Nama: ${from_name}\nEmail: ${reply_to}\n\nPesan:\n${message}`
     };
 
@@ -91,7 +91,7 @@ const PORT = process.env.PORT || 3000;
 // Menggunakan 0.0.0.0 agar bisa diakses dari HP dalam satu jaringan WiFi
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`--------------------------------------------------`);
-    console.log(`🚀 NCUKS STORE BACKEND AKTIF!`);
+    console.log(`🚀 NAILS STORE BACKEND AKTIF!`);
     console.log(`🏠 Local:   http://localhost:${PORT}`);
     console.log(`📱 Network: http://[ALAMAT-IP-KOMPUTER-ANDA]:${PORT}`);
     console.log(`--------------------------------------------------`);
